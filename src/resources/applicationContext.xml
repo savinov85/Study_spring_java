@@ -14,6 +14,8 @@
     <bean id="musicPlayer"
         class="ru.savinov.springcourse.MusicPlayer">
         <property name="music" ref="musicBean"/>
+        <property name="name" value="some Name"/>
+        <property name="volume" value="50"/>
         <!--property name="music - наименование сеттера SetMusic"
         ref="musicBean - Id бина который необходимо импортировать"-->
     </bean>

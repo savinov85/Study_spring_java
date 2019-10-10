@@ -2,6 +2,24 @@ package ru.savinov.springcourse;
 
 public class MusicPlayer {
     private Music music;
+    private String name;
+    private String volume;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getVolume() {
+        return volume;
+    }
+
+    public void setVolume(String volume) {
+        this.volume = volume;
+    }
 
     //IoC
     public MusicPlayer(Music music) {
