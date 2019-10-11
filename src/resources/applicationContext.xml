@@ -12,7 +12,7 @@
     </bean>
 
     <bean id="musicPlayer"
-        class="ru.savinov.springcourse.MusicPlayer">
+        class="ru.savinov.springcourse.MusicPlayer" >
         <property name="music" ref="musicBean"/>
         <property name="name" value="some Name"/>
         <property name="volume" value="50"/>
