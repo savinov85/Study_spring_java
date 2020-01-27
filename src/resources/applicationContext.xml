@@ -6,6 +6,9 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:property-placeholder location="classpath:musicPlayer.properties"/>
+    <!--context:property-placeholder location тег который позволяет импортировать файл в applicationContext
+        для обращения к переменным внутри файла используется синтаксис доллар фигурные скобки ${имя переменной}-->
 
     <bean id="musicBean"
           class="ru.savinov.springcourse.ClassicalMusic">
@@ -14,10 +17,9 @@
     <bean id="musicPlayer"
         class="ru.savinov.springcourse.MusicPlayer" >
         <property name="music" ref="musicBean"/>
-        <property name="name" value="some Name"/>
-        <property name="volume" value="50"/>
-        <!--property name="music - наименование сеттера SetMusic"
-        ref="musicBean - Id бина который необходимо импортировать"-->
+        <property name="name" value="${musicPlayer.name}"/>
+        <property name="volume" value="${musicPlayer.volume}"/>
+
     </bean>
 
 </beans>
