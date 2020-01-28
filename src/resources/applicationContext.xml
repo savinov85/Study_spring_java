@@ -7,8 +7,7 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
     <context:property-placeholder location="classpath:musicPlayer.properties"/>
-    <!--context:property-placeholder location тег который позволяет импортировать файл в applicationContext
-        для обращения к переменным внутри файла используется синтаксис доллар фигурные скобки ${имя переменной}-->
+    <!--по умолчанию бин создаётся с scope = "singleton" -->
 
     <bean id="musicBean"
           class="ru.savinov.springcourse.ClassicalMusic">
