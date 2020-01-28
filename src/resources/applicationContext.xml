@@ -7,14 +7,15 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
     <context:property-placeholder location="classpath:musicPlayer.properties"/>
-    <!--по умолчанию бин создаётся с scope = "singleton" -->
+    <!--Указали scope = "prototype" -->
 
     <bean id="musicBean"
           class="ru.savinov.springcourse.ClassicalMusic">
     </bean>
 
     <bean id="musicPlayer"
-        class="ru.savinov.springcourse.MusicPlayer" >
+          class="ru.savinov.springcourse.MusicPlayer"
+        scope = "prototype">
         <property name="music" ref="musicBean"/>
         <property name="name" value="${musicPlayer.name}"/>
         <property name="volume" value="${musicPlayer.volume}"/>

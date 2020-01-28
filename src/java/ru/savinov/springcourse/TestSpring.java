@@ -15,17 +15,17 @@ public class TestSpring {
 
         boolean comparison = firstMusicPlayer == secondMusicPlayer;
         System.out.println(comparison);
-        System.out.println(firstMusicPlayer); //хешкод объектов совпадает следовательно ссылки указывают на
-        System.out.println(secondMusicPlayer);  //один и тот же участок
+        System.out.println(firstMusicPlayer); //хешкод объектов не совпадает следовательно ссылки указывают на
+        System.out.println(secondMusicPlayer);  // разные участки
         System.out.println("звук проигрывателя 1: " + firstMusicPlayer.getVolume()); // значение из файла
         System.out.println("звук проигрывателя 2: " + secondMusicPlayer.getVolume()); // значение из файла
 
-        firstMusicPlayer.setVolume("10"); // меняем звук у одной ссылке
+        firstMusicPlayer.setVolume("10"); // меняем звук у одной ссылки
 
         System.out.println("звук проигрывателя 1: " + firstMusicPlayer.getVolume());
         System.out.println("звук проигрывателя 2: " + secondMusicPlayer.getVolume());
-        // звук меняется у обеих ссылок следовательно объект полученный из контекста один и тот же
-        // так работает scope = singleton у бина по умолчанию
+        // звук меняется у объекта полученного по одной из ссылок следовательно объектов несколько
+        // так работает scope = "prototype"
         context.close();
     }
 
