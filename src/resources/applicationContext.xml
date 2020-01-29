@@ -10,16 +10,19 @@
     <!--Указали scope = "prototype" -->
 
     <bean id="musicBean"
-          class="ru.savinov.springcourse.ClassicalMusic">
+          class="ru.savinov.springcourse.ClassicalMusic"
+          init-method="doMyInit"
+          destroy-method="doMyDestroy"
+          scope="singleton">
     </bean>
 
-    <bean id="musicPlayer"
-          class="ru.savinov.springcourse.MusicPlayer"
-        scope = "prototype">
-        <property name="music" ref="musicBean"/>
-        <property name="name" value="${musicPlayer.name}"/>
-        <property name="volume" value="${musicPlayer.volume}"/>
+    <!--   <bean id="musicPlayer"
+             class="ru.savinov.springcourse.MusicPlayer"
+           scope = "prototype">
+           <property name="music" ref="musicBean"/>
+           <property name="name" value="${musicPlayer.name}"/>
+           <property name="volume" value="${musicPlayer.volume}"/>
 
-    </bean>
+       </bean>-->
 
 </beans>
