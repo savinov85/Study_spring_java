@@ -13,7 +13,7 @@
           class="ru.savinov.springcourse.ClassicalMusic"
           init-method="doMyInit"
           destroy-method="doMyDestroy"
-          scope="singleton">
+          factory-method="getClassicalMusic">
     </bean>
 
     <!--   <bean id="musicPlayer"
