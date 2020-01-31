@@ -1,5 +1,5 @@
 package ru.savinov.springcourse;
 
-public interface Music{
+public interface Music {
         String getSong();
         }
