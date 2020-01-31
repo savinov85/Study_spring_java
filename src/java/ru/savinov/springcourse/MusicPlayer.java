@@ -14,11 +14,7 @@ public class MusicPlayer {
         this.rockMusic = rockMusic;
     }
 
-
-
-    public void playMusic()
-    {
-        System.out.println("Playing: " + rockMusic.getSong());
-        System.out.println("Playing: " + classicalMusic.getSong());
+    public String playMusic() {
+        return rockMusic.getSong();
     }
 }
